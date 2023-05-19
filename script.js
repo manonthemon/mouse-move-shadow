@@ -8,16 +8,15 @@ function shadow(e) {
   let { offsetX: x, offsetY: y } = e; //coursor position
 
   //This fixes the problem with hovering over children which affects the reading of X and Y.
-
   if (this !== e.target) {
     x = x + e.target.offsetLeft;
     y = y + e.target.offsetTop;
   }
 
-  const xWalk = (x / width * walk) - (walk / 2)
-  const yWalk = (y / height * walk) - (walk / 2)
+  const xWalk = Math.round(x / width * walk) - (walk / 2) //Math round round down the numbers
+  const yWalk = Math.round(y / height * walk) - (walk / 2)
 
-  console.log(xWalk, yWalk)
+text.style.textShadow = `${xWalk}px ${yWalk}px 0 red`
 }
 
 hero.addEventListener("mousemove", shadow);
