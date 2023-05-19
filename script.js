@@ -21,8 +21,6 @@ ${xWalk}px ${yWalk}px rgba(255,0,255,0.7),
 ${xWalk * -1}px ${yWalk}px rgba(0, 255, 255,0.7),
 ${yWalk}px ${xWalk * -1}px rgba(0, 255, 0,0.7),
 ${yWalk * -1}px ${xWalk}px rgba(0, 0, 255,0.7)
-
-
 `
 }
 
